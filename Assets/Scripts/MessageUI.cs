@@ -11,7 +11,8 @@ public class MessageUI : MonoBehaviour
 {
     public Text messageText;
     private CanvasGroup canvasGroup;
-    private string playerName = "";
+    public string playerName = "";
+    public string userId = "";
 
     private void Awake()
     {
@@ -40,9 +41,10 @@ public class MessageUI : MonoBehaviour
     }
 
 
-    public void BindPlayer(string name)
+    public void BindPlayer(string name, string userId)
     {
         this.playerName = name;
+        this.userId = userId;
     }
 
 

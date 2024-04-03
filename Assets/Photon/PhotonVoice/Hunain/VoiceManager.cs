@@ -43,12 +43,11 @@ public class VoiceManager : MonoBehaviourPun
 
     public void EnableDisableSpeaker()
     {
-        Speaker[] speakers =  FindObjectsOfType<Speaker>(true);
 
-        foreach (var item in speakers)
+        foreach (var item in FindObjectsOfType<ClothDynamic>(true))
         {
             Debug.Log(item.name , item.gameObject);
-            item.GetComponent<AudioSource>().enabled = item.enabled = !speakerEnable;
+            item.GetComponent<AudioSource>().enabled = item.GetComponent<Speaker>().enabled = !speakerEnable;
         }
 
         Color color = speakerImage.color;

@@ -38,7 +38,7 @@ public class NetPlayerController : MonoBehaviourPun,IPunObservable
         userName.text = PhotonNetwork.LocalPlayer.NickName;
         if (photonView.IsMine)
         {
-            photonView.RPC("BindMessageUI", RpcTarget.AllBuffered, PhotonNetwork.LocalPlayer.NickName);
+            photonView.RPC("BindMessageUI", RpcTarget.AllBuffered, PhotonNetwork.LocalPlayer.NickName, PhotonNetwork.LocalPlayer.UserId);
         }
     }
 
@@ -49,9 +49,9 @@ public class NetPlayerController : MonoBehaviourPun,IPunObservable
     }
 
     [PunRPC]
-    private void BindMessageUI(string playerName)
+    private void BindMessageUI(string playerName , string userId)
     {
-        messageUI.BindPlayer(playerName);
+        messageUI.BindPlayer(playerName , userId);
     }
     
 }

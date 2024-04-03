@@ -1,6 +1,7 @@
 using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -68,6 +69,12 @@ public class CampusChatHandler : MonoBehaviourPunCallbacks
         }
     }
 
+    [PunRPC]
+    public void UpdateCostume(string userId, int index)
+    {
+        FindObjectsOfType<MessageUI>().ToList().Find(x => x.userId.Equals(userId)).GetComponentInParent<ClothDynamic>().UpdateMaterial(index);
+
+    }
 
     public void ShowMessage(string msg)
     {
@@ -101,7 +108,68 @@ public class CampusChatHandler : MonoBehaviourPunCallbacks
     {
         Debug.Log("OnPlayerEnteredRoom: " + newPlayer.NickName);
         UpdatePlayerChatList();
+        if (PhotonNetwork.LocalPlayer.IsMasterClient)
+            UpdateCostume(newPlayer);
     }
+
+    private void UpdateCostume(Photon.Realtime.Player newPlayer)
+    {
+        int maleCount = 0;
+        int femaleCount = 0;
+
+        foreach (var item in PhotonNetwork.CurrentRoom.Players)
+        {
+            if (item.Value.CustomProperties.ContainsKey("Gender"))
+            {
+                Debug.Log(item.Value.CustomProperties["Gender"]);
+                if (item.Value.CustomProperties["Gender"].ToString().Equals("Male"))
+                {
+                    maleCount++;
+                }
+                if (item.Value.CustomProperties["Gender"].ToString().Equals("Female"))
+                {
+                    femaleCount++;
+                }
+
+            }
+        }
+
+        Debug.Log("maleCount: " + maleCount + ", femaleCount: " + femaleCount);
+
+        if (newPlayer.CustomProperties["Gender"].ToString().Equals("Male"))
+        {
+            if (maleCount == 1)
+            {
+                GetComponent<PhotonView>().RPC(nameof(UpdateCostume), RpcTarget.All, newPlayer.UserId, 0);
+            }
+            else if (maleCount == 2)
+            {
+                GetComponent<PhotonView>().RPC(nameof(UpdateCostume), RpcTarget.All, newPlayer.UserId, 1);
+            }
+            else
+            {
+                GetComponent<PhotonView>().RPC(nameof(UpdateCostume), RpcTarget.All, newPlayer.UserId, 0);
+            }
+        }
+
+        if (newPlayer.CustomProperties["Gender"].ToString().Equals("Female"))
+        {
+            if (femaleCount == 1)
+            {
+                GetComponent<PhotonView>().RPC(nameof(UpdateCostume), RpcTarget.All, newPlayer.UserId, 0);
+            }
+            else if (femaleCount == 2)
+            {
+                GetComponent<PhotonView>().RPC(nameof(UpdateCostume), RpcTarget.All, newPlayer.UserId, 1);
+            }
+            else
+            {
+                GetComponent<PhotonView>().RPC(nameof(UpdateCostume), RpcTarget.All, newPlayer.UserId, 0);
+            }
+        }
+    }
+
+
 
     public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)
     {

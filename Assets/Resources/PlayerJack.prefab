@@ -388,6 +388,7 @@ GameObject:
   - component: {fileID: 6485164587234841812}
   - component: {fileID: -7565364432790884444}
   - component: {fileID: 1633315816132926976}
+  - component: {fileID: 6211729761642436251}
   m_Layer: 0
   m_Name: PlayerJack
   m_TagString: Player
@@ -778,6 +779,23 @@ MonoBehaviour:
     Max: 1000
     SpeedUpPerc: 5
   restartOnDeviceChange: 1
+--- !u!114 &6211729761642436251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012207865707305337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 623a5255dae1149afbbf125ec98733e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gender: 0
+  myRenderer: {fileID: 490462025630610547}
+  materials:
+  - {fileID: 2100000, guid: fd812f57482e83c418f011ac81f2d819, type: 2}
+  - {fileID: 2100000, guid: f364376074c15bc48902196cea828cc4, type: 2}
 --- !u!1 &1379159703563390824
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,8 +832,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 2.228}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: 2.1354}
+  m_SizeDelta: {x: 200, y: 31.4852}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4601102839624362171
 Canvas:
@@ -2166,7 +2184,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u8D85\u7EA7\u5C0F\u56DB"
+  m_Text: 
 --- !u!1 &5547718083771610052
 GameObject:
   m_ObjectHideFlags: 0
@@ -3397,7 +3415,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a9ace131267aa4b57bc728ee8b732914, type: 2}
+  - {fileID: 2100000, guid: fd812f57482e83c418f011ac81f2d819, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3641,6 +3659,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4059797598888913770}
     m_Modifications:
+    - target: {fileID: 519058500195987334, guid: 7dd2305c821ad784faf5a994301252b1,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3600805460016883014, guid: 7dd2305c821ad784faf5a994301252b1,
         type: 3}
       propertyPath: m_Name

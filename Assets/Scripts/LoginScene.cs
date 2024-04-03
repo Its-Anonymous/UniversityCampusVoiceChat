@@ -6,6 +6,8 @@ using Photon.Realtime;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Photon.Chat;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
+
 
 public class LoginScene : MonoBehaviourPunCallbacks
 {
@@ -87,6 +89,13 @@ public class LoginScene : MonoBehaviourPunCallbacks
         ShowPanel(START_PANEL);
         ShowTip("Game loading");
         GameManager.Instance.SelectedPlayer = 1;
+
+        PhotonNetwork.LocalPlayer.NickName = name;
+
+        Hashtable hash = new Hashtable();
+        hash.Add("Gender", "Male");
+        PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
+
         JoinRoom();
     }
     public void OnBtnChoiceIronClick()
@@ -94,6 +103,11 @@ public class LoginScene : MonoBehaviourPunCallbacks
         ShowPanel(START_PANEL);
         ShowTip("Game loading");
         GameManager.Instance.SelectedPlayer = 2;
+
+        Hashtable hash = new Hashtable();
+        hash.Add("Gender", "Female");
+        PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
+
         JoinRoom();
     }
 
