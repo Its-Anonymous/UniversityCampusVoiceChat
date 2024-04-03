@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class VoiceManager : MonoBehaviourPun
 {
+    public bool speakerEnable = true;
 
     public Recorder recorder;
     public Image micImage;
+    public Image speakerImage;
 
     public void EnableDisableVoiceManager()
     {
@@ -37,5 +39,20 @@ public class VoiceManager : MonoBehaviourPun
         Color color = micImage.color;
         color.a = recorder.TransmitEnabled ? 1: .3f;
         micImage.color = color;
+    }
+
+    public void EnableDisableSpeaker()
+    {
+        Speaker[] speakers =  FindObjectsOfType<Speaker>(true);
+
+        foreach (var item in speakers)
+        {
+            Debug.Log(item.name , item.gameObject);
+            item.GetComponent<AudioSource>().enabled = item.enabled = !speakerEnable;
+        }
+
+        Color color = speakerImage.color;
+        color.a = speakerEnable ? 1 : .3f;
+        speakerImage.color = color;
     }
 }

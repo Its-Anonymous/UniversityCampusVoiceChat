@@ -9,17 +9,17 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4713667809460704605}
-  - component: {fileID: 4236179244139645807}
   - component: {fileID: 1753554523409939814}
   - component: {fileID: 3127755955177483145}
   - component: {fileID: 797626465347943106}
+  - component: {fileID: 6605434753016749599}
   m_Layer: 0
   m_Name: VoiceManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4713667809460704605
 Transform:
   m_ObjectHideFlags: 0
@@ -28,27 +28,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2666813323837702523}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4236179244139645807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2666813323837702523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a34db0262ed474e549d35f81d1ac4382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recorder: {fileID: 1753554523409939814}
-  micImage: {fileID: 0}
 --- !u!114 &1753554523409939814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +108,8 @@ MonoBehaviour:
   ApplyDontDestroyOnLoad: 0
   runInBackground: 1
   statsResetInterval: 1000
-  speakerPrefab: {fileID: 3487333517487342899, guid: a69f82ae7ef4144279d319eca8933f72, type: 3}
+  speakerPrefab: {fileID: 3487333517487342899, guid: a69f82ae7ef4144279d319eca8933f72,
+    type: 3}
   primaryRecorder: {fileID: 1753554523409939814}
   usePrimaryRecorder: 1
   cppCompatibilityMode: 0
@@ -147,3 +134,17 @@ MonoBehaviour:
   AutoLeaveAndDisconnect: 1
   usePunAppSettings: 1
   usePunAuthValues: 1
+--- !u!114 &6605434753016749599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2666813323837702523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4614c38ce7449a483cfea973e6d592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recorder: {fileID: 1753554523409939814}
+  micImage: {fileID: 0}
