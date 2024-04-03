@@ -75,13 +75,15 @@ public class LoginScene : MonoBehaviourPunCallbacks
         startTipsTxt.text = message;
     }
 
+    string playerName = "";
+
     public void OnBtnEnterGameClick()
     {
-        string name = iptUserName.text.Trim();
-        if (!string.IsNullOrWhiteSpace(name))
+        playerName = iptUserName.text.Trim();
+        if (!string.IsNullOrWhiteSpace(playerName))
         {
             ShowPanel(SELECT_PANEL);
-            PhotonNetwork.LocalPlayer.NickName = name;
+            PhotonNetwork.LocalPlayer.NickName = playerName;
         }
     }
     public void OnBtnChoiceJackClick()
@@ -90,7 +92,7 @@ public class LoginScene : MonoBehaviourPunCallbacks
         ShowTip("Game loading");
         GameManager.Instance.SelectedPlayer = 1;
 
-        PhotonNetwork.LocalPlayer.NickName = name;
+        //PhotonNetwork.LocalPlayer.NickName = playerName;
 
         Hashtable hash = new Hashtable();
         hash.Add("Gender", "Male");

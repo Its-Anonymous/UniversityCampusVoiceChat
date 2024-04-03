@@ -20,15 +20,15 @@ public class MessageUI : MonoBehaviour
         canvasGroup.alpha = 0;
     }
 
-    private void OnEnable()
-    {
-        ChatManager.OnReceiveMessage.AddListener(OnReceiveMessage);
-    }
+    //private void OnEnable()
+    //{
+    //    ChatManager.OnReceiveMessage.AddListener(OnReceiveMessage);
+    //}
 
-    private void OnDisable()
-    {
-        ChatManager.OnReceiveMessage.RemoveListener(OnReceiveMessage);
-    }
+    //private void OnDisable()
+    //{
+    //    ChatManager.OnReceiveMessage.RemoveListener(OnReceiveMessage);
+    //}
 
     private void Update()
     {
@@ -41,30 +41,29 @@ public class MessageUI : MonoBehaviour
     }
 
 
-    public void BindPlayer(string name, string userId)
-    {
-        this.playerName = name;
-        this.userId = userId;
-    }
+    //public void BindPlayer(string name)
+    //{
+    //    this.playerName = name;
+    //}
 
 
-    private void OnReceiveMessage(string sender, string message)
-    {
-        if (sender == this.playerName)
-        {
-            ShowMessage(message);
-        }
-    }
+    //private void OnReceiveMessage(string sender, string message)
+    //{
+    //    if (sender == this.playerName)
+    //    {
+    //        ShowMessage(message);
+    //    }
+    //}
 
-    public void ShowMessage(string message)
-    {
-        messageText.text = message;
-        canvasGroup.alpha = 1;
-        int msgLength =  Encoding.UTF8.GetBytes(message).Length;
-        canvasGroup.DOFade(1, 2 * msgLength * 0.2f).OnComplete(()=>
-        {
-            canvasGroup.alpha = 0;
-        });
-    }
+    //public void ShowMessage(string message)
+    //{
+    //    messageText.text = message;
+    //    canvasGroup.alpha = 1;
+    //    int msgLength =  Encoding.UTF8.GetBytes(message).Length;
+    //    canvasGroup.DOFade(1, 2 * msgLength * 0.2f).OnComplete(()=>
+    //    {
+    //        canvasGroup.alpha = 0;
+    //    });
+    //}
 
 }

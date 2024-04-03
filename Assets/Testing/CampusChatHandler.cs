@@ -72,7 +72,17 @@ public class CampusChatHandler : MonoBehaviourPunCallbacks
     [PunRPC]
     public void UpdateCostume(string userId, int index)
     {
-        FindObjectsOfType<MessageUI>().ToList().Find(x => x.userId.Equals(userId)).GetComponentInParent<ClothDynamic>().UpdateMaterial(index);
+        foreach (var item in FindObjectsOfType<ClothDynamic>(true))
+        {
+            Debug.Log("UpdateCostume: " + item.GetComponentInChildren<MessageUI>().userId);
+            if (item.GetComponentInChildren<MessageUI>().userId == userId)
+            {
+                Debug.Log("item.name" + item.name, item);
+                item.UpdateMaterial(index);
+            }
+        }
+
+        
 
     }
 
