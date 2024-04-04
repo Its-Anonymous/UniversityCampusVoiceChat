@@ -791,10 +791,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623a5255dae1149afbbf125ec98733e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gender: 0
   myRenderer: {fileID: 490462025630610547}
   materials:
   - {fileID: 2100000, guid: fd812f57482e83c418f011ac81f2d819, type: 2}
-  - {fileID: 2100000, guid: f364376074c15bc48902196cea828cc4, type: 2}
+  - {fileID: 2100000, guid: a9ace131267aa4b57bc728ee8b732914, type: 2}
 --- !u!1 &1379159703563390824
 GameObject:
   m_ObjectHideFlags: 0
