@@ -1,41 +1,23 @@
 ﻿using Photon.Pun;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class OnTriggerLoadLevel : MonoBehaviour
 {
-    public string levelToLoad;
-    public GameObject pauseCanvas;
-
-    private void Start()
-    {
-        pauseCanvas.SetActive(false);
-    }
+    public GameObject SpawnPoint;
 
     void OnTriggerEnter(Collider plyr)
     {
-        
-    
         if (plyr.gameObject.tag == "Player")
         {
-            if (PhotonNetwork.IsConnected &&  PhotonNetwork.InRoom)
+            if (PhotonNetwork.IsConnected && PhotonNetwork.InRoom && plyr.GetComponent<PhotonView>().IsMine)
             {
-                SceneManager.LoadScene(levelToLoad);
-                pauseCanvas.SetActive(true);
-                
-
-                PhotonNetwork.LeaveRoom();
+                plyr.gameObject.SetActive(false);
+                plyr.transform.SetParent(SpawnPoint.transform);
+                plyr.transform.position = Vector3.zero;
+                //plyr.transform.position = SpawnPoint.transform.position;
+                plyr.transform.localPosition = Vector3.zero;
+                plyr.gameObject.SetActive(true);
             }
-            
-        }
-    }
-    void OnTriggerExit(Collider plyr)
-    {
-        if (plyr.gameObject.tag == "Player")
-        {
-
         }
     }
 }
