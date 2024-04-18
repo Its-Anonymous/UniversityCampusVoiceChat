@@ -27,7 +27,7 @@ public class CampusManager : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.IsConnected && PhotonNetwork.InRoom)
         {
-            AgoraManager.Instance.JoinChannel(); //Agora sdk????????????????????
+            //AgoraManager.Instance.JoinChannel(); //Agora sdk????????????????????
             int SeletedPlayer = GameManager.Instance.SelectedPlayer;
             Transform spawnPoint = spawnPointRoot.GetChild(Random.Range(0, spawnPointRoot.childCount));
             string name = string.Empty;
@@ -63,7 +63,7 @@ public class CampusManager : MonoBehaviourPunCallbacks
     {
         base.OnDisconnected(cause);
         SceneManager.LoadScene("Login");
-        AgoraManager.Instance.Leave();
+        //AgoraManager.Instance.Leave();
     }
 
 

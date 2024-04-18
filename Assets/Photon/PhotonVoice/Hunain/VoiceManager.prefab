@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4713667809460704605
 Transform:
   m_ObjectHideFlags: 0
@@ -146,5 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a4614c38ce7449a483cfea973e6d592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speakerEnable: 1
   recorder: {fileID: 1753554523409939814}
   micImage: {fileID: 0}
+  speakerImage: {fileID: 0}

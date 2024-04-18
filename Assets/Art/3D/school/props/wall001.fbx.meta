@@ -11,13 +11,10 @@ ModelImporter:
     400004: //RootNode
     2100000: Mat.7
     2100002: Mat.22
-    2100004: No Name
     2300000: Boole_2
     2300002: Cloner_1
-    2300004: //RootNode
     3300000: Boole_2
     3300002: Cloner_1
-    3300004: //RootNode
     4300000: Cloner_1
     4300002: Boole_2
   externalObjects: {}
@@ -54,7 +51,6 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -79,9 +75,6 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -96,6 +89,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
