@@ -61,7 +61,7 @@ public class CampusChatHandler : MonoBehaviourPunCallbacks
                     Debug.Log("I Receive a message from " + item.Value.NickName);
                     Debug.Log("Message = " + Message);
 
-                    string msg = "Message Receives From "+item.Value.NickName  +"\n" + Message;
+                    string msg = item.Value.NickName  +": " + Message;
                     ShowMessage(msg);
                     break;
                 }
