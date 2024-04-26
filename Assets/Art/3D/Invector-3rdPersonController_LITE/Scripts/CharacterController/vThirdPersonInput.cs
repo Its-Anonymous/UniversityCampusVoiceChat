@@ -33,6 +33,7 @@ namespace Invector.vCharacterController
             InitializeTpCamera();
         }
 
+        
         protected virtual void FixedUpdate()
         {
             if (!photonView.IsMine) return;

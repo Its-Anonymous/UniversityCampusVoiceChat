@@ -152,8 +152,16 @@ namespace Invector.vCharacterController
             CheckSlopeLimit();
             ControlJumpBehaviour();
             AirControl();
+            Sit();
         }
 
+        public void Sit()
+        {
+            if (isGrounded)
+            {
+                
+            }
+        }
         #region Locomotion
 
         public virtual void SetControllerMoveSpeed(vMovementSpeed speed)
