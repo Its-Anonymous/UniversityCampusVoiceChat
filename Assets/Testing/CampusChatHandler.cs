@@ -120,8 +120,8 @@ public class CampusChatHandler : MonoBehaviourPunCallbacks
     {
         Debug.Log("OnPlayerEnteredRoom: " + newPlayer.NickName);
         UpdatePlayerChatList();
-        if (PhotonNetwork.LocalPlayer.IsMasterClient)
-            UpdateCostume(newPlayer);
+        //if (PhotonNetwork.LocalPlayer.IsMasterClient)
+        //    UpdateCostume(newPlayer);
     }
 
     private void UpdateCostume(Photon.Realtime.Player newPlayer)
