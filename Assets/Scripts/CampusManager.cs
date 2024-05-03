@@ -9,8 +9,12 @@ using UnityEngine.EventSystems;
 
 public class CampusManager : MonoBehaviourPunCallbacks
 {
-    public GameObject jackPrefab;
-    public GameObject ironPrefab;
+    public GameObject male1;
+    public GameObject male2;
+    public GameObject male3;
+    public GameObject female1;
+    public GameObject female2;
+    public GameObject female3;
     public Transform spawnPointRoot;
     public vThirdPersonInput playerInput;
 
@@ -30,24 +34,38 @@ public class CampusManager : MonoBehaviourPunCallbacks
             //AgoraManager.Instance.JoinChannel(); //Agora sdk????????????????????
             int SeletedPlayer = GameManager.Instance.SelectedPlayer;
             Transform spawnPoint = spawnPointRoot.GetChild(Random.Range(0, spawnPointRoot.childCount));
-            string name = string.Empty;
-            if (SeletedPlayer == 1)
+            string prefabName = string.Empty;
+            switch (SeletedPlayer)
             {
-                name = jackPrefab.name;
-                
+                case 1:
+                    prefabName = male1.name;
+                    break;
+                case 2:
+                    prefabName = male2.name;
+                    break;
+                case 3:
+                    prefabName = male3.name;
+                    break;
 
+                case 4:
+                    prefabName = female1.name;
+                    break;
+                case 5:
+                    prefabName = female2.name;
+                    break;
+                case 6:
+                    prefabName = female3.name;
+                    break;
 
+                default:
+                    break;
             }
-            else if (SeletedPlayer == 2)
-            {
-                name = ironPrefab.name;
-               
-            }
+
             //PhotonNetwork.Instantiate(name, spawnPoint.position, spawnPoint.rotation);
             //PhotonNetwork.CleanRpcBufferIfMine(photonView);
             //PhotonNetwork.OpCleanRpcBuffer(photonView);
             //photonView.RPC("Create", RpcTarget.AllBuffered, name, spawnPoint.position, spawnPoint.rotation);
-            PhotonNetwork.Instantiate(name, spawnPoint.position, spawnPoint.rotation);
+            PhotonNetwork.Instantiate(prefabName, spawnPoint.position, spawnPoint.rotation);
             return;
         }
         Debug.LogError("Fail to connect the server!");

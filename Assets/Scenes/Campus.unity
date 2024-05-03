@@ -15819,6 +15819,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6745138494096380487, guid: e160c320e9bf7ff409f07e07fa8d1be0,
         type: 3}
+      propertyPath: male1
+      value: 
+      objectReference: {fileID: 1012207865707305337, guid: ae14069a21371b444ae83a3cbb3cdafe,
+        type: 3}
+    - target: {fileID: 6745138494096380487, guid: e160c320e9bf7ff409f07e07fa8d1be0,
+        type: 3}
+      propertyPath: male2
+      value: 
+      objectReference: {fileID: 5833861430063542944, guid: 7dba4998f79d44de6adb2011d27ea1e7,
+        type: 3}
+    - target: {fileID: 6745138494096380487, guid: e160c320e9bf7ff409f07e07fa8d1be0,
+        type: 3}
+      propertyPath: male3
+      value: 
+      objectReference: {fileID: 1452067572784206635, guid: 27779da24233d46638ae789f1e384d3f,
+        type: 3}
+    - target: {fileID: 6745138494096380487, guid: e160c320e9bf7ff409f07e07fa8d1be0,
+        type: 3}
+      propertyPath: female1
+      value: 
+      objectReference: {fileID: 2808946414275586409, guid: 8b757673da91b4fc79234cc7dfa0cac7,
+        type: 3}
+    - target: {fileID: 6745138494096380487, guid: e160c320e9bf7ff409f07e07fa8d1be0,
+        type: 3}
+      propertyPath: female2
+      value: 
+      objectReference: {fileID: 7818662899749611494, guid: a3a5583eea5d04d7c8fe27d4878515d0,
+        type: 3}
+    - target: {fileID: 6745138494096380487, guid: e160c320e9bf7ff409f07e07fa8d1be0,
+        type: 3}
+      propertyPath: female3
+      value: 
+      objectReference: {fileID: 1784242126164057738, guid: fdf3a5127c0f74513b76197c21473e7c,
+        type: 3}
+    - target: {fileID: 6745138494096380487, guid: e160c320e9bf7ff409f07e07fa8d1be0,
+        type: 3}
       propertyPath: ironPrefab
       value: 
       objectReference: {fileID: 2808946414275586409, guid: 8b757673da91b4fc79234cc7dfa0cac7,

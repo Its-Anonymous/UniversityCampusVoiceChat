@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get { return instance; } }
 
 
-    public int SelectedPlayer = 0; //选择的角色类型
+    public int SelectedPlayer = 0; //??????????????
+    public Gender SelectedGender = Gender.female; //??????????????
 
     private void Awake()
     {

@@ -18,15 +18,19 @@ public class LoginScene : MonoBehaviourPunCallbacks
     public const string START_PANEL = "StartPanel";
     public const string LOGIN_PANEL = "LoginPanel";
     public const string SELECT_PANEL = "SelectPanel";
+    public const string SELECT_Character_PANEL = "SelectCharacterPanel";
 
     public Text startTipsTxt;
     public InputField iptUserName;
+
+    public static LoginScene instance;
 
 
 
     private void Awake()
     {
         ShowPanel(START_PANEL); //????????????????
+        instance = this;
     }
 
 
@@ -70,7 +74,7 @@ public class LoginScene : MonoBehaviourPunCallbacks
         ShowPanel(LOGIN_PANEL);
     }
 
-    private void ShowTip(string message)
+    public void ShowTip(string message)
     {
         startTipsTxt.text = message;
     }
@@ -88,32 +92,29 @@ public class LoginScene : MonoBehaviourPunCallbacks
     }
     public void OnBtnChoiceJackClick()
     {
-        ShowPanel(START_PANEL);
-        ShowTip("Game loading");
-        GameManager.Instance.SelectedPlayer = 1;
-
-        //PhotonNetwork.LocalPlayer.NickName = playerName;
-
+        ShowPanel(SELECT_Character_PANEL);
+        GameManager.Instance.SelectedGender = Gender.male;
         Hashtable hash = new Hashtable();
         hash.Add("Gender", "Male");
         PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
-
-        JoinRoom();
     }
     public void OnBtnChoiceIronClick()
     {
-        ShowPanel(START_PANEL);
+        ShowPanel(SELECT_Character_PANEL);
         ShowTip("Game loading");
-        GameManager.Instance.SelectedPlayer = 2;
-
+        GameManager.Instance.SelectedGender = Gender.female;
         Hashtable hash = new Hashtable();
         hash.Add("Gender", "Female");
         PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
-
-        JoinRoom();
     }
 
+    public void CharacterSelection()
+    {
 
+        //GameManager.Instance.SelectedPlayer = 1;
+        //ShowTip("Game loading");
+        //JoinRoom();
+    }
     public void JoinRoom()
     {
         if (PhotonNetwork.IsConnected)
@@ -135,7 +136,7 @@ public class LoginScene : MonoBehaviourPunCallbacks
         PhotonNetwork.LoadLevel("Campus");
     }
     
-    private void ShowPanel(string name)
+    public void ShowPanel(string name)
     {
         for (int i = 0; i < panels.Length; i++)
         {
