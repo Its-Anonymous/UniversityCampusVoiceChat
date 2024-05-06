@@ -92,20 +92,20 @@ public class LoginScene : MonoBehaviourPunCallbacks
     }
     public void OnBtnChoiceJackClick()
     {
-        ShowPanel(SELECT_Character_PANEL);
         GameManager.Instance.SelectedGender = Gender.male;
         Hashtable hash = new Hashtable();
         hash.Add("Gender", "Male");
         PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
+        ShowPanel(SELECT_Character_PANEL);
     }
     public void OnBtnChoiceIronClick()
     {
-        ShowPanel(SELECT_Character_PANEL);
         ShowTip("Game loading");
         GameManager.Instance.SelectedGender = Gender.female;
         Hashtable hash = new Hashtable();
         hash.Add("Gender", "Female");
         PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
+        ShowPanel(SELECT_Character_PANEL);
     }
 
     public void CharacterSelection()

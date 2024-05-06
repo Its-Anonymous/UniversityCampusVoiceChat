@@ -2723,47 +2723,52 @@ PrefabInstance:
     - target: {fileID: 2358905638042016009, guid: 196d3ecfdfba20c4bb258a301c215ee5,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2358905638042016009, guid: 196d3ecfdfba20c4bb258a301c215ee5,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2358905638042016009, guid: 196d3ecfdfba20c4bb258a301c215ee5,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 2358905638042016009, guid: 196d3ecfdfba20c4bb258a301c215ee5,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 2358905638437017379, guid: 196d3ecfdfba20c4bb258a301c215ee5,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2358905638437017379, guid: 196d3ecfdfba20c4bb258a301c215ee5,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 2358905638437017388, guid: 196d3ecfdfba20c4bb258a301c215ee5,
         type: 3}
       propertyPath: m_Size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2358905639206204635, guid: 196d3ecfdfba20c4bb258a301c215ee5,
+    - target: {fileID: 2358905639171598511, guid: 196d3ecfdfba20c4bb258a301c215ee5,
         type: 3}
-      propertyPath: m_AnchorMax.x
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2358905639206204635, guid: 196d3ecfdfba20c4bb258a301c215ee5,
         type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2358905639206204635, guid: 196d3ecfdfba20c4bb258a301c215ee5,
+        type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2358905639206204635, guid: 196d3ecfdfba20c4bb258a301c215ee5,
         type: 3}
@@ -2878,22 +2883,22 @@ PrefabInstance:
     - target: {fileID: 2358905639352566273, guid: 196d3ecfdfba20c4bb258a301c215ee5,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2358905639352566273, guid: 196d3ecfdfba20c4bb258a301c215ee5,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 2358905639511061571, guid: 196d3ecfdfba20c4bb258a301c215ee5,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2358905639511061571, guid: 196d3ecfdfba20c4bb258a301c215ee5,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2358905639511061571, guid: 196d3ecfdfba20c4bb258a301c215ee5,
         type: 3}
@@ -4271,7 +4276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4538,7 +4543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15609,7 +15614,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fceba3ca7762e45f59dd6d3471ddd35f, type: 2}
+  - {fileID: 2100000, guid: 40e51f69b6bfc4aa5b7506924bbb75db, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
