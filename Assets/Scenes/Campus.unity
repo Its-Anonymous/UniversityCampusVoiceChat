@@ -6301,6 +6301,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClassRoom (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1893056042802271405, guid: 4fb9e3a68ebb9440a865cd617e1d4ee7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950221783371376769, guid: 4fb9e3a68ebb9440a865cd617e1d4ee7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3305869834803249538, guid: 4fb9e3a68ebb9440a865cd617e1d4ee7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411545547594047319, guid: 4fb9e3a68ebb9440a865cd617e1d4ee7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3578659967927117028, guid: 4fb9e3a68ebb9440a865cd617e1d4ee7,
         type: 3}
       propertyPath: m_LocalPosition.x

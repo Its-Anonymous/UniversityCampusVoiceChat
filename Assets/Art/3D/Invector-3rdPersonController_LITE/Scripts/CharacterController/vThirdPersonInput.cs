@@ -54,7 +54,7 @@ namespace Invector.vCharacterController
         public virtual void OnAnimatorMove()
         {
             if (!photonView.IsMine) return;
-            cc.ControlAnimatorRootMotion(); // handle root motion animations 
+            if(cc) cc.ControlAnimatorRootMotion(); // handle root motion animations 
         }
 
         #region Basic Locomotion Inputs
